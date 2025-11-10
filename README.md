@@ -89,6 +89,20 @@ verificando los flujos principales de depósito, retiro, control de pausado y l�
 
 ---
 
+
+## 💡 Mejoras respecto a KipuBankV2
+
+| Área | V2 | V3 |
+|------|----|----|
+| Activos soportados | ETH + USDC | ETH + USDC + ERC20 |
+| Límite global | En USD | USD con swaps previos |
+| Oráculo | Chainlink ETH/USD | Chainlink + Uniswap Router |
+| Seguridad | Reentrancy + Ownable | + SafeERC20 + Pausable |
+| Testing | Básico | Cobertura completa |
+| Arquitectura | Modular | Integración DeFi real |
+
+---
+
 ## 📐 Decisiones de diseño y trade-offs
 
 - **Swaps siempre hacia USDC como “moneda contable”:**  
@@ -202,19 +216,6 @@ A continuación se listan algunos riesgos del protocolo y posibles líneas de me
   - Integrar pruebas de integración completas con un fork de Sepolia o Mainnet para simular Uniswap real.
 
 
-
-## 💡 Mejoras respecto a KipuBankV2
-
-| Área | V2 | V3 |
-|------|----|----|
-| Activos soportados | ETH + USDC | ETH + USDC + ERC20 |
-| Límite global | En USD | USD con swaps previos |
-| Oráculo | Chainlink ETH/USD | Chainlink + Uniswap Router |
-| Seguridad | Reentrancy + Ownable | + SafeERC20 + Pausable |
-| Testing | Básico | Cobertura completa |
-| Arquitectura | Modular | Integración DeFi real |
-
----
 
 ## 🔗 Contrato desplegado
 
